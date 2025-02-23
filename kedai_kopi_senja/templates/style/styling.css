@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url(/static/style/header-bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.navbar {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  background-color: rgb(51, 51, 51);
+  -webkit-box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+}
+.navbar ul {
+  list-style: none;
+  margin: 20px;
+  /* padding: 20px 10px 20px 23px; */
+  /* background-color: white; */
+  /* -webkit-box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75); */
+}
+
+.navbar h3 {
+  display: flex;
+  font-size: 40px;
+  font-family: "Caveat", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  padding: 10px;
+  text-decoration: none;
+  color: #f3e1e1;
+}
+
+.navbar h3 span {
+  font-family: "Caveat", sans-serif;
+  color: #ffc400;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  padding-right: 20px;
+  /* background-color: white; */
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #e97100;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar ul li a:hover {
+  background-color: #ffc400;
+  color: whitesmoke;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar img {
+  width: 70px;
+  height: 70px;
+  padding: 5px 0px 5px 35px;
+  margin: 0;
+  align-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 89px);
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(189, 113, 0, 0.6),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.content-description {
+  color: white;
+  font-family: "Caveat", sans-serif;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.content-description h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #000, 0, 0, 10px #ffc400, 0, 0, 20px #ffc400;
+  color: #ffc400;
+  margin-bottom: 1rem;
+}
+
+.content-description p {
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: 300;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.content-description pre {
+  font-style: italic;
+  color: #ffc400;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 2px #000;
+  margin-bottom: 30px;
+}
+
+.content-description .btn {
+  padding: 25px 55px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4800;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+
+.content-description .btn a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.content .content-description .btn:hover {
+  background-color: #e97100;
+  color: white;
+  box-shadow: 0px 0px 25px #ffc400;
+  transition: 0.3s ease-in-out;
+}
+
+footer {
+  padding: 5px;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  text-align: center;
+  font-weight: bold;
+}

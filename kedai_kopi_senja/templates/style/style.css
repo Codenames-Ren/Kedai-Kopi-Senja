@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url(header-bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.navbar {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  background-color: rgb(51, 51, 51);
+  -webkit-box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+}
+.navbar ul {
+  list-style: none;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+
+.navbar h3 {
+  display: flex;
+  font-size: 40px;
+  font-family: "Caveat", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  padding: 10px;
+  text-decoration: none;
+  color: #f3e1e1;
+}
+
+.navbar h3 span {
+  font-family: "Caveat", sans-serif;
+  color: #ffc400;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  padding-right: 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #e97100;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar ul li a:hover {
+  background-color: #ffc400;
+  color: whitesmoke;
+  transition: 0.3s ease-in-out;
+}
+.navbar img {
+  width: 70px;
+  height: 70px;
+  padding: 5px 0px 5px 35px;
+  margin: 0;
+  align-content: center;
+}
+.main {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(189, 113, 0, 0.6),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+.content {
+  width: 70%;
+  text-align: justify;
+  padding: 15px 15px 15px 15px;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: rgb(80, 77, 77);
+  width: 30%;
+  height: 90vh;
+  padding: 17px 10px 10px 10px;
+  flex-direction: column;
+  display: none;
+}
+
+/* #stockUpdate itu styling buat admin menu */
+#stockUpdate {
+  position: relative;
+}
+
+#stockUpdate h2 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 25px;
+}
+
+#stockUpdate p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+#stockUpdate button:not(.close-btn) {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  text-align: center;
+  width: 90%;
+  height: 50px;
+  margin: 10px 10px 10px 15px;
+  background-color: rgb(247, 143, 7);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  -webkit-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+}
+
+#stockUpdate button:not(.close-btn):hover {
+  background-color: rgb(211, 120, 0);
+}
+
+#stockUpdate .close-btn {
+  display: inline-block;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  line-height: 1;
+}
+
+#stockUpdate .close-btn:hover {
+  color: #ffc400;
+  background: none;
+}
+
+#newStock {
+  background: white;
+  border-radius: 10px;
+  box-shadow: #4e4e4e;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 55px;
+  -moz-appearance: textfield;
+}
+
+#newStock::-webkit-inner-spin-button,
+#newStock::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Styling buat menu sama admin menu (card bordernya) */
+.card-order {
+  width: 91%;
+  height: 50px;
+  margin: 10px 10px 10px 15px;
+  background-color: white;
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+}
+
+.card-order img {
+  width: 50px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.card-order p {
+  padding: 10px;
+  font-size: 17px;
+  width: 70%;
+  font-weight: 500;
+  color: #4e4e4e;
+  text-align: left;
+}
+
+.card-order span {
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #4e4e4e;
+  width: 1%;
+}
+
+.card-order button {
+  background-color: rgb(214, 11, 11);
+  border-radius: 10px;
+  padding: 0;
+  margin: 10px 0px 10px 20px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  color: whitesmoke;
+  font-weight: 500;
+  align-items: flex-end;
+}
+
+.card-order button:hover {
+  background-color: rgb(163, 12, 12);
+}
+
+.card {
+  width: 280px;
+  height: max-content;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 10px;
+  display: inline-block;
+  aspect-ratio: 1/1;
+  -webkit-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+}
+
+.card img {
+  width: 92%;
+  height: 80%;
+  margin: 10px 10px 0px 10px;
+  border-radius: 10px;
+  /* display: flex; */
+}
+
+.card p {
+  margin-left: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-family: "Mulish", sans-serif;
+  color: #4e4e4e;
+  font-weight: 700;
+}
+
+.card hr {
+  margin: 10px;
+  color: #b8b8b8;
+  border-color: #e2e1e1;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 10px 10px;
+}
+
+.order span {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.card-finish button {
+  border: none;
+  text-align: center;
+  width: 90%;
+  height: 50px;
+  margin: 10px 10px 10px 15px;
+  background-color: rgb(247, 143, 7);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  -webkit-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+}
+
+.card-finish button:hover {
+  background-color: rgb(211, 120, 0);
+}
+
+.fas {
+  color: #ffffff;
+}
+
+.action button {
+  background-color: #00b91f;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.action button:hover {
+  background-color: #189e2e;
+}
+
+.total {
+  margin: 0px 10px 20px 15px;
+}
+
+.total h1 {
+  color: white;
+}
+
+.detail {
+  width: 70%;
+  display: flex;
+}
+
+/* Styling halaman about */
+.about {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(189, 113, 0, 0.6),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.about .gambar {
+  width: 400px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 10px;
+  display: inline-block;
+  -webkit-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 9px 18px -13px rgba(0, 0, 0, 0.75);
+}
+
+.about .gambar img {
+  width: 92%;
+  margin: 10px 10px 0px 10px;
+  border-radius: 10px;
+  box-shadow: #4e4e4e;
+  border-style: solid;
+}
+
+.about blockquote {
+  margin-top: 10px;
+}
+
+.about footer {
+  text-align: end;
+  color: #e97100;
+}
+
+.pengembang {
+  margin-top: 30px;
+  padding-top: 30px;
+  color: white;
+  text-decoration: solid;
+  text-shadow: #b8b8b8;
+  font-weight: 10px;
+  font-size: 20px;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.person {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 200px;
+  padding: 15px;
+  color: white;
+  text-decoration: solid;
+  text-shadow: #b8b8b8;
+  font-size: 20px;
+}
+
+.person img {
+  border-radius: 10px;
+  width: 180px;
+}
+.person p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.person span {
+  font-size: 14px;
+}
+
+footer {
+  padding: 5px;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Media query buat layar 1280px */
+@media (max-width: 1280px) {
+  html,
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .main {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 100px;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+
+  .navbar ul li {
+    margin-left: 30px;
+    font-size: 18px;
+  }
+
+  .navbar h3 {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 250px;
+    margin: 10px;
+  }
+
+  .card span {
+    font-size: 16px;
+  }
+
+  .content {
+    width: 85%;
+  }
+
+  .action span {
+    font-size: 13px;
+  }
+
+  .sidebar {
+    width: 35%;
+  }
+
+  #stockUpdate .close-btn {
+    font-size: 25px;
+    top: 10px;
+    right: 10px;
+  }
+}

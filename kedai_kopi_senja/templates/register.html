@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kopi Senja - Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/login.css') }}"
+    />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>Kopi&nbsp;<span class="title">Senja Register</span></h1>
+      <form id="loginForm" action="{{ url_for('register') }}" method="POST">
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+        <div class="user-box">
+          <input type="text" name="username" required />
+          <label for="">Username</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="password" required />
+          <label for="">Password</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="confirm_password" required />
+          <label for="">Konfirmasi Password</label>
+        </div>
+        <button class="btn-reg" type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Daftar
+        </button>
+      </form>
+      <p class="p-reg">
+        Sudah punya akun? <a href="{{ url_for('login') }}">Login Disini!</a>
+      </p>
+    </div>
+    <script>
+      function showAlert() {
+        const form = document.getElementById("registerForm");
+        const password = form.querySelector('input[name="password"]').value;
+        const confirmPassword = form.querySelector(
+          'input[name="confirm_password"]'
+        ).value;
+
+        if (password !== confirmPassword) {
+          alert("Password dan konfirmasi password tidak sama!");
+          return false;
+        }
+
+        alert("Registrasi berhasil! Silahkan login ke akun anda!");
+        return true;
+      }
+    </script>
+  </body>
+</html>
